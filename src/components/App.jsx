@@ -4,11 +4,11 @@ import Statistics from './Statistics/Statistics';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
 
-const options = [
-  { id: 'good', title: 'good', type: 'button', name: 'good' },
-  { id: 'neutral', title: 'neutral', type: 'button', name: 'neutral' },
-  { id: 'bad', title: 'bad', type: 'button', name: 'bad' },
-];
+// const options = [
+//   { id: 'good', title: 'good', type: 'button', name: 'good' },
+//   { id: 'neutral', title: 'neutral', type: 'button', name: 'neutral' },
+//   { id: 'bad', title: 'bad', type: 'button', name: 'bad' },
+// ];
 class App extends React.Component {
   state = {
     good: 0,
@@ -42,7 +42,7 @@ class App extends React.Component {
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={options}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.leaveFeedback}
           />
         </Section>
